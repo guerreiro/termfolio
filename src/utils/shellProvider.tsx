@@ -78,6 +78,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         break;
       case 'clear':
         clearHistory();
+        setCommand('banner');
         break;
       case '':
         setHistory('');
