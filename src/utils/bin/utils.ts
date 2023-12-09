@@ -56,7 +56,6 @@ export const repo = async (args?: string[]): Promise<string> => {
 
 // export const donate = async (args?: string[]): Promise<string> => {
 //   window.open(packageJson.funding.url, '_blank');
-
 //   return 'Opening donation url...';
 // };
 
@@ -65,7 +64,7 @@ export const banner = (args?: string[]): string => {
   
   return `
   ${randBanner}
-
+<br>
 Welcome to my personal website!
 Hi! I'm Gabriel, a full stack developer, techleader and now an entrepreneur!
 

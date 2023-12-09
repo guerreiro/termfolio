@@ -25,7 +25,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   return (
     <>
       <Head>
-        <title>Gabriel Guerreiro | Home</title>
+        <title>Gabs</title>
       </Head>
 
       <div

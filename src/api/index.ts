@@ -21,8 +21,16 @@ export const getWeather = async (city: string) => {
   return data;
 };
 
+export const getAnimechan = async (title?: String, name?: String) => {
+  const { data } = await axios.get(`https://animechan.xyz/api/random`);
+
+  return data;
+};
+
 export const getQuote = async () => {
   const { data } = await axios.get('https://api.quotable.io/random');
+  // const { data } = await axios.get('https://animechan.xyz/api/random/anime?title=naruto');
+  // const { data } = await axios.get('https://animechan.xyz/api/random/character?name=naruto');
 
   return {
     quote: `“${data.content}” — ${data.author}`,

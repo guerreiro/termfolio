@@ -32,6 +32,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
 
   useEffect(() => {
     setCommand('banner');
+    bin.theme(['random'], setTheme);
   }, []);
 
   useEffect(() => {
@@ -53,9 +54,14 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
   };
 
   const setCommand = (command: string) => {
-    _setCommand([Date.now(), command].join(' '));
+    
+    const commands = command.split(' && ');
 
-    setInit(false);
+    commands.forEach(c => {
+      _setCommand([Date.now(), c].join(' '));
+      setInit(false);
+    })
+    
   };
 
   const clearHistory = () => {
